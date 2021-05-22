@@ -1,0 +1,18 @@
+# che-data-pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: che-data-volume
+  labels:
+    type: local
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/vagrant/che-data-storage"
+  claimRef:
+    namespace: eclipse-che
+    name: che-data-volume
