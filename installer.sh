@@ -9,3 +9,4 @@ sudo apt-mark hold grub-pc
 sudo apt-get -y upgrade
 sudo apt-get install -y zip unzip curl wget socat ebtables git vim
 sudo apt-get install -y jq
+sudo apt install net-tools -y
