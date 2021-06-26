@@ -12,7 +12,13 @@ https://www.vagrantup.com/docs/installation/
 
 Start VM with following command:
 ```
-CHE_MULTIUSER=true vagrant up
+CHE_LIMITS_USER_WORKSPACES_RUN_COUNT=5 CHE_MULTIUSER=true vagrant up
+```
+
+In some specific situations you can run your Eclipse Che workspaces as root (local/secure environments):
+```
+CHE_INFRA_KUBERNETES_POD_SECURITY__CONTEXT_FS__GROUP     = "0"
+CHE_INFRA_KUBERNETES_POD_SECURITY__CONTEXT_RUN__AS__USER = "0"
 ```
 
 At the end of chectl's execution (the Eclipse Che installer), a link
