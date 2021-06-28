@@ -21,6 +21,18 @@ CHE_INFRA_KUBERNETES_POD_SECURITY__CONTEXT_FS__GROUP     = "0"
 CHE_INFRA_KUBERNETES_POD_SECURITY__CONTEXT_RUN__AS__USER = "0"
 ```
 
+To define amount of time of the Workspaces:
+```
+CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT=-1
+```
+(-1 is unlimited) <BR>
+
+To define how much Workspaces you can run at same time:
+```
+CHE_LIMITS_USER_WORKSPACES_RUN_COUNT=-1
+```
+(-1 is unlimited) <BR>  
+  
 At the end of chectl's execution (the Eclipse Che installer), a link
 will be displayed that should be usable to load Eclipse Che's
 dashboard in the web browser running on the host machine.
