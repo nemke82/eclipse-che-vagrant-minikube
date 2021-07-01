@@ -123,7 +123,7 @@ sub_start(){
     # Wait for ingress-nginx
     echo "Waiting for ingress..."
     kubectl wait --timeout=300s --for=condition=Ready -n kube-system pod -l app.kubernetes.io/component=controller,app.kubernetes.io/name=ingress-nginx
-
+    sudo systemctl enable kubelet
     chmod +x /home/vagrant/chescript.sh
     /home/vagrant/chescript.sh start
 }
